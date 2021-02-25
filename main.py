@@ -1,18 +1,24 @@
 from read_input import read_input
 from write_output import write_output
-from model import Point
 from process import process
 
-lines = read_input("in.csv")
+plan_a = read_input("a.txt")
+plan_b = read_input("b.txt")
+plan_c = read_input("c.txt")
+plan_d = read_input("d.txt")
+plan_e = read_input("e.txt")
+plan_f = read_input("f.txt")
 
-out = []
+out_a = process(plan_a)
+out_b = process(plan_b)
+out_c = process(plan_c)
+out_d = process(plan_d)
+out_e = process(plan_e)
+out_f = process(plan_f)
 
-for line in lines[1:]:
-    x, y = line.split(';')
-    p = Point(int(x), int(y))
-    p.print_obj()
-    p = process(p)
-    out.append(p)
-
-write_output(out)
-
+write_output(out_a, "out_a")
+write_output(out_b, "out_b")
+write_output(out_c, "out_c")
+write_output(out_d, "out_d")
+write_output(out_e, "out_e")
+write_output(out_f, "out_f")
