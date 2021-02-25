@@ -1,6 +1,6 @@
 
 def write_output(lp, file_name):
-    file = open('file_name', 'w')
+    file = open(file_name, 'w')
     
     file.write(str(lp.nb_intersection) + "\n")
     

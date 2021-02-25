@@ -36,6 +36,7 @@ class Output:
     def __init__(self, nb_intersection, intersections):
         self.nb_intersection = nb_intersection
         self.intersections = intersections
+        
 
     def print_obj(self):
         print("duration : {}".format(self.duration))
