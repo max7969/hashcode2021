@@ -20,10 +20,12 @@ def read_input(filename):
     cars = []
 
     for line in lines[1:1+n_streets]:
+        line = line.replace('\n', '')
         split_street = line.split(" ")
         streets.append(Street(int(split_street[0]), int(split_street[1]), split_street[2], int(split_street[3])))
 
     for line in lines[1+n_streets+1:(1+n_streets+n_cars)]:
+        line = line.replace('\n', '')
         split_car = line.split(" ")
         cars.append(Car(int(split_car[0]), split_car[1:]))
 
